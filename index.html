@@ -1,46 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script>var snow = [];
-      var num = 100;
-      var x = [];
-      var y = [];
-      var speed = [];
-
-      function setup() {
-        var cnv = createCanvas(windowWidth, windowHeight);
-        cnv.style('display', 'block');
-        for (var i = 0; i < num; i++) {
-          snow.push(new Snowflake());
-        }
-      }
-
-      function draw() {
-        background(0);
-        for (var i = 0; i < num; i++) {
-          snow[i].move();
-          snow[i].display();
-        }
-      }
-
-      function Snowflake() {
-        this.x = random(0, width);
-        this.y = random(0, height);
-        this.d = random(3, 8);
-        this.speed = random(1, 3);
-
-        this.move = function() {
-          this.y += this.speed;
-          if (this.y > height) {
-            this.y = 0;
-          }
-        }
-
-        this.display = function() {
-          ellipse(this.x, this.y, this.d, this.d);
-        }
-      }</script>
+<title>本地视频播放</title>
 </head>
-<body onload="setup()">
+<body>
+
+<video width="320" height="240" controls>
+  <source src="1162_1673355365.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 </body>
 </html>
